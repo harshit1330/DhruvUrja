@@ -129,7 +129,11 @@ app.use('/api/v1', async (request, response) => {
 
     if (path === '/api/v1/stations' && request.method === 'GET') {
       const result = await backend(path, {signal: AbortSignal.timeout(10000)});
-      if (!result.ok) return response.status(result.status).json({detail: 'Station list unavailable'});
+      if (!result.ok) {
+        const detail = await result.text();
+        console.error(`DhruvUrja backend station list failed (${result.status}): ${detail}`);
+        return response.status(result.status).json({detail: `Station list unavailable (${result.status})`});
+      }
       return response.json((await result.json()).filter(station => station.id === session.station));
     }
 
