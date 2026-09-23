@@ -11,6 +11,7 @@ const backendUrl = (process.env.DHRUVURJA_BACKEND_URL || 'http://127.0.0.1:8001'
 
 async function loadApiKey() {
   if (process.env.DHRUVURJA_API_KEY) return process.env.DHRUVURJA_API_KEY;
+  if (process.env.VERCEL) return 'dhruvurja-public-demo-key-2026';
   try {
     return (await readFile(resolve(root, '../backend/data/api-key.txt'), 'utf8')).trim();
   } catch {
