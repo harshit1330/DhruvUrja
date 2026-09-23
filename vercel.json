@@ -16,8 +16,7 @@
     "backend": {
       "root": "backend/",
       "framework": "fastapi",
-      "entrypoint": "main:app",
-      "excludeFiles": [".venv/**", "test_*.py", "data/**"]
+      "entrypoint": "main:app"
     }
   },
   "rewrites": [
