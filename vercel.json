@@ -17,7 +17,6 @@
       "root": "backend/",
       "framework": "fastapi",
       "entrypoint": "main:app",
-      "maxDuration": 60,
       "excludeFiles": [".venv/**", "test_*.py", "data/**"]
     }
   },

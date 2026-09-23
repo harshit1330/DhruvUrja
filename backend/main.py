@@ -24,4 +24,3 @@ async def current_demo_inputs(request, call_next):
     if request.url.path.startswith('/api/v1/stations/'):
         await run_in_threadpool(refresh_demo, app.state.store)
     return await call_next(request)
-
