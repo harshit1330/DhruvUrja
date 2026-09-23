@@ -1,0 +1,391 @@
+/* Public pages fit the viewport; only the workspace has extended dashboard content. */
+.home-body #app,.login-body #app{min-height:100svh;display:grid;grid-template-rows:80px 1fr auto}
+.home-body .public-header,.login-body .public-header{height:80px}
+.home-body .site-footer,.login-body .site-footer{padding:12px 5%}
+.home-body .institution-footer,.login-body .institution-footer{display:none}
+.home-body .footer-bottom,.login-body .footer-bottom{padding:0;border:0;font-size:9px}
+.home-body .sketch-landing{display:grid;grid-template-rows:104px 1fr auto 26px;padding:0 5%;min-height:0}
+.home-body .station-nav-row{height:104px;width:100%}
+.home-body .station-selector legend{padding-bottom:10px}
+.home-body .nav-globe{height:104px;width:140px}
+.home-body .nav-globe .globe-wrap{top:-8px;left:0;transform:scale(.3)}
+.home-body .nav-globe .globe-caption{display:none}
+.home-body .centered-intro{align-self:center;padding:16px 0 20px;width:100%}
+.home-body .centered-intro h1{font-size:clamp(30px,3vw,45px);line-height:1.17;margin:10px 0}
+.home-body .centered-intro>p{font-size:17px}
+.home-body .landing-login{margin-top:18px;padding:12px 25px;font-size:15px}
+.home-body .login-station-note{margin-top:9px}
+.home-body .station-section{width:100%}
+.home-body .section-heading{margin-bottom:12px}
+.home-body .section-heading h2{font-size:21px;margin-top:4px}
+.home-body .station-card{padding:15px 21px 0}
+.home-body .station-title{margin:5px 0 3px}
+.home-body .station-title h3{font-size:25px}
+.home-body .station-description{min-height:0;margin-top:8px;font-size:11px;line-height:1.5}
+.home-body .station-card-bottom{margin-top:12px;padding:11px 0}
+.home-body .landscape-caption{align-self:center;margin:0;font-size:8px}
+.login-body .login-page{padding:16px 5% 20px;display:flex;flex-direction:column;justify-content:center;min-height:0}
+.login-body .login-page-heading{padding:0 0 18px}
+.login-body .login-page-heading h1{font-size:clamp(24px,2.5vw,35px)}
+.login-body .login-page-heading>p{font-size:18px;margin-top:4px}
+.login-body .login-layout{width:100%;margin:0 auto;align-items:center}
+.login-body .station-story{min-height:0;padding:20px 12px}
+.login-body .station-story h2{margin:14px 0 22px}
+.login-body .login-panel{padding:22px 26px}
+.login-body .secure-heading{padding-bottom:14px}
+.login-body .secure-heading h2{font-size:22px}
+.login-body .login-lock{height:46px;width:46px}
+.login-body #login-form{margin-top:14px}
+.login-body #login-form label{margin:10px 0 5px}
+.login-body .input-wrap{min-height:39px}
+.login-body .input-wrap input,.login-body .input-wrap select{padding:8px 0}
+.login-body #login-form .button.primary{margin-top:18px;padding:12px}
+.login-body #login-form .button.secondary{margin-top:8px;padding:9px}
+.login-body .login-disclaimer{margin-top:13px;padding-top:12px;font-size:9px}
+/* The first dashboard viewport ends after the forecast/flow panels. */
+.dashboard-body{--dashboard-header-height:90px}
+.workspace-header{height:var(--dashboard-header-height)}
+.dashboard-main:has(.dashboard-first-screen){padding-top:18px}
+.dashboard-first-screen{min-height:calc(100svh - var(--dashboard-header-height) - 18px);display:flex;flex-direction:column;gap:16px}
+.dashboard-first-screen .weather-strip{margin:0;padding:13px 22px}
+.dashboard-first-screen .weather-item strong{font-size:19px}
+.dashboard-first-screen .metric-grid{margin:0;gap:18px}
+.dashboard-first-screen .metric-card{padding:14px 18px 12px}
+.dashboard-first-screen .metric-value{font-size:34px;margin-top:6px}
+.dashboard-first-screen .metric-bottom{margin-top:7px}
+.dashboard-first-screen .primary-panels{margin:0;flex:1;min-height:280px}
+.dashboard-first-screen .primary-panels>.panel{display:flex;flex-direction:column}
+.dashboard-first-screen .panel-heading{padding:17px 22px 0}
+.dashboard-first-screen .panel-heading h2{font-size:18px}
+.dashboard-first-screen .chart-legend{padding-top:15px}
+.dashboard-first-screen .forecast-chart{height:0;min-height:140px;flex:1}
+.dashboard-first-screen .flow-canvas{height:auto;min-height:224px;flex:1;padding-top:16px;padding-bottom:16px}
+.dashboard-first-screen .flow-lines{top:50%;bottom:auto;height:218px;transform:translateY(-50%)}
+.dashboard-first-screen .flow-node{padding:8px 12px}
+.dashboard-first-screen .flow-node strong{font-size:18px}
+.dashboard-first-screen .flow-sources{gap:10px}
+.dashboard-first-screen .flow-destinations{gap:28px}
+.dashboard-first-screen .chart-foot,.dashboard-first-screen .flow-foot{padding-top:11px;padding-bottom:11px}
+.dashboard-scroll-cue{display:flex;align-items:center;justify-content:center;gap:9px;align-self:center;padding:2px 15px 11px;background:none;border:0;color:#3778b8;font-size:11px;line-height:18px}
+.dashboard-scroll-cue .icon{height:15px;width:15px;transform:rotate(90deg)}
+.dashboard-scroll-cue:hover{color:#004c9f}
+#station-details{padding-top:24px;scroll-margin-top:15px}
+@media(min-width:901px) and (max-height:800px){
+  .home-body #app,.login-body #app{grid-template-rows:68px 1fr auto}
+  .home-body .public-header,.login-body .public-header{height:68px}
+  .home-body .brand img,.login-body .brand img{width:39px;height:39px}
+  .home-body .sketch-landing{grid-template-rows:85px 1fr auto 22px}
+  .home-body .station-nav-row{height:85px}
+  .home-body .nav-globe{height:85px;width:115px}
+  .home-body .nav-globe .globe-wrap{transform:scale(.25);top:-6px}
+  .home-body .centered-intro{padding:10px 0 15px}
+  .home-body .centered-intro h1{font-size:36px;margin:8px 0}
+  .home-body .centered-intro>.eyebrow{font-size:9px}
+  .home-body .landing-login{margin-top:13px;padding:11px 24px;font-size:14px}
+  .home-body .section-heading h2{font-size:19px}
+  .home-body .station-card{padding-top:12px}
+  .home-body .station-description{font-size:10px}
+  .home-body .station-card-bottom{padding:9px 0;margin-top:9px}
+  .login-body .login-page{padding:12px 5% 16px}
+  .login-body .login-page-heading{padding-bottom:13px}
+  .login-body .login-page-heading h1{font-size:29px}
+  .login-body .login-page-heading>p{font-size:16px}
+  .login-body .login-panel{padding:19px 25px}
+  .login-body .secure-heading{padding-bottom:11px}
+  .login-body .secure-heading h2{font-size:21px}
+  .login-body #login-form{margin-top:10px}
+  .login-body #login-form label{margin-top:8px;font-size:11px}
+  .login-body .input-wrap{min-height:36px}
+  .login-body .input-wrap input,.login-body .input-wrap select{padding:7px 0;font-size:12px}
+  .login-body #login-form .button.primary{margin-top:14px;padding:10px}
+  .login-body #login-form .button.secondary{padding:8px}
+  .login-body .login-disclaimer{padding-top:9px;margin-top:10px}
+  .dashboard-body{--dashboard-header-height:76px}
+  .dashboard-first-screen{gap:12px}
+  .dashboard-first-screen .metric-card{padding:11px 16px}
+  .dashboard-first-screen .metric-value{font-size:30px}
+  .dashboard-first-screen .metric-icon{height:29px;width:29px}
+  .dashboard-first-screen .metric-bottom{margin-top:5px}
+  .dashboard-first-screen .weather-strip{padding:10px 20px}
+  .dashboard-first-screen .panel-heading{padding:14px 20px 0}
+  .dashboard-first-screen .flow-canvas{min-height:198px}
+  .dashboard-first-screen .flow-lines{height:190px}
+  .dashboard-first-screen .flow-node{padding:7px 10px}
+  .dashboard-first-screen .flow-node strong{font-size:16px}
+  .dashboard-first-screen .flow-node>span{font-size:10px}
+  .dashboard-first-screen .flow-center{padding:12px 16px}
+  .dashboard-first-screen .flow-center img{height:35px;width:35px}
+}
+@media(min-width:651px) and (max-width:900px){
+  .home-body .station-description{font-size:10px}
+  .home-body .station-card{padding-left:15px;padding-right:15px}
+  .home-body .station-card-bottom{flex-wrap:nowrap;gap:5px}
+  .home-body .station-card-bottom>.text-link{width:auto;font-size:9px}
+  .home-body .station-card-bottom>span{font-size:8px}
+  .login-body .login-layout{gap:25px}
+  .login-body .login-panel{padding:21px}
+  .login-body .secure-heading h2{font-size:18px}
+  .dashboard-first-screen .primary-panels{grid-template-columns:1fr 1.05fr;min-height:305px}
+  .dashboard-first-screen .panel-heading{padding:15px 13px 0}
+  .dashboard-first-screen .panel-heading h2{font-size:15px}
+  .dashboard-first-screen .panel-heading p{font-size:9px}
+  .dashboard-first-screen .chart-legend{font-size:8px;padding:14px 12px 3px;gap:10px}
+  .dashboard-first-screen .chart-unit{display:none}
+  .dashboard-first-screen .flow-canvas{padding-left:10px;padding-right:10px}
+  .dashboard-first-screen .flow-lines{left:10px;right:10px;width:calc(100% - 20px)}
+  .dashboard-first-screen .flow-node{min-width:80px;padding:8px 6px;gap:5px}
+  .dashboard-first-screen .flow-node>.icon{width:15px;height:15px}
+  .dashboard-first-screen .flow-node>span{font-size:8px}
+  .dashboard-first-screen .flow-node strong{font-size:15px}
+  .dashboard-first-screen .flow-node em{font-size:6px}
+  .dashboard-first-screen .flow-center{padding:11px 6px}
+  .dashboard-first-screen .flow-center img{width:28px;height:28px}
+  .dashboard-first-screen .flow-center strong{font-size:8px}
+  .dashboard-first-screen .flow-center small{font-size:7px}
+  .dashboard-first-screen .chart-foot,.dashboard-first-screen .flow-foot{font-size:6px;padding:11px}
+}
+@media(max-width:650px){
+  .home-body #app,.login-body #app{grid-template-rows:60px 1fr auto}
+  .home-body .public-header,.login-body .public-header{height:60px}
+  .home-body .brand,.login-body .brand{font-size:18px}
+  .home-body .brand img,.login-body .brand img{width:32px;height:32px}
+  .home-body .ministry-brand,.login-body .ministry-brand{font-size:9px;max-width:145px}
+  .home-body .ministry-brand>span,.login-body .ministry-brand>span{font-size:8px}
+  .home-body .ministry-brand small,.login-body .ministry-brand small{display:none}
+  .home-body .site-footer,.login-body .site-footer{padding:8px 5%}
+  .home-body .footer-bottom,.login-body .footer-bottom{flex-direction:row;align-items:center;font-size:7px;gap:10px}
+  .home-body .footer-bottom>span:last-child,.login-body .footer-bottom>span:last-child{max-width:52%;text-align:right}
+  .home-body .sketch-landing{grid-template-rows:80px 1fr auto 21px}
+  .home-body .station-nav-row{height:80px}
+  .home-body .station-selector{max-width:78%;gap:8px}
+  .home-body .station-selector legend{font-size:7px;padding-bottom:5px}
+  .home-body .station-radio{font-size:11px;column-gap:4px}
+  .home-body .station-radio small{font-size:7px}
+  .home-body .nav-globe{width:74px;height:80px}
+  .home-body .nav-globe .globe-wrap{transform:scale(.21);top:0;left:0}
+  .home-body .centered-intro{padding:12px 0 16px}
+  .home-body .centered-intro>.eyebrow{font-size:7px;letter-spacing:1px}
+  .home-body .centered-intro h1{font-size:27px;line-height:1.17;margin:10px 0 8px}
+  .home-body .centered-intro>p{font-size:14px}
+  .home-body .landing-login{min-width:0;width:max-content;padding:11px 18px;font-size:12px;margin-top:13px;gap:12px}
+  .home-body .login-station-note{font-size:8px;margin-top:8px}
+  .home-body .section-heading{margin-bottom:9px}
+  .home-body .section-heading .eyebrow{display:none}
+  .home-body .section-heading h2{font-size:18px;margin:0}
+  .home-body .station-cards{gap:9px}
+  .home-body .station-card{display:grid;grid-template-columns:1fr auto;column-gap:10px;padding:11px 15px;border-radius:8px;position:relative}
+  .home-body .station-card-top{grid-column:2;grid-row:1;align-self:center}
+  .home-body .station-region{font-size:7px;letter-spacing:1px}
+  .home-body .station-region .icon{height:10px;width:10px}
+  .home-body .station-number,.home-body .station-title>.icon,.home-body .station-description{display:none}
+  .home-body .station-title{grid-column:1;grid-row:1;margin:0}
+  .home-body .station-title h3{font-size:20px}
+  .home-body .station-place{grid-column:1;grid-row:2;font-size:9px;margin-top:2px}
+  .home-body .station-card-bottom{grid-column:2;grid-row:2;padding:0;margin:0;border:0;justify-self:end}
+  .home-body .station-card-bottom>span{display:none}
+  .home-body .station-card-bottom>.text-link{font-size:9px}
+  .home-body .landscape-caption{font-size:7px}
+  .login-body .login-page{padding:10px 5% 13px;justify-content:center}
+  .login-body .login-page-heading{padding-bottom:10px}
+  .login-body .login-page-heading h1{font-size:19px;line-height:1.2;letter-spacing:-.3px}
+  .login-body .login-page-heading>p{font-size:12px;margin-top:3px}
+  .login-body .login-layout{gap:12px}
+  .login-body .station-story{padding:0 5px}
+  .login-body .station-story>.eyebrow,.login-body .station-story>p,.login-body .story-caption{display:none}
+  .login-body .station-story h2{font-size:23px;margin:0 0 5px;display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+  .login-body .station-story h2>span{font-size:8px;letter-spacing:2px;margin:0}
+  .login-body .story-location{margin-bottom:7px;gap:6px}
+  .login-body .story-location>.icon{width:14px;height:14px}
+  .login-body .story-location>div{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+  .login-body .story-location strong,.login-body .story-location span{font-size:9px;margin:0}
+  .login-body .login-weather{display:grid;grid-template-columns:repeat(3,1fr);padding:9px 5px;margin:0;border-radius:7px}
+  .login-body .login-weather>div{display:flex;flex-direction:column;gap:2px;padding:0;border:0;border-right:1px solid #bed8ef}
+  .login-body .login-weather>div:last-child{border:0}
+  .login-body .login-weather .icon{display:none}
+  .login-body .login-weather span{font-size:8px}
+  .login-body .login-weather strong{font-size:17px}
+  .login-body .login-weather small{font-size:9px}
+  .login-body .login-panel{padding:16px 18px;border-radius:12px}
+  .login-body .secure-heading{gap:10px;padding-bottom:10px}
+  .login-body .secure-heading h2{font-size:19px}
+  .login-body .secure-heading p{font-size:10px;margin-top:4px}
+  .login-body .login-lock{height:34px;width:34px}
+  .login-body .login-lock>.icon{height:20px;width:20px}
+  .login-body #login-form{margin-top:10px}
+  .login-body #login-form label{font-size:10px;margin:8px 0 4px}
+  .login-body .input-wrap{min-height:35px}
+  .login-body .input-wrap input,.login-body .input-wrap select{padding:7px 0;font-size:12px}
+  .login-body #login-form .button.primary{margin-top:13px;padding:10px;font-size:13px}
+  .login-body #login-form .button.secondary{margin-top:7px;padding:8px;font-size:11px}
+  .login-body .login-disclaimer{margin-top:9px;padding-top:8px;font-size:8px;line-height:1.45;gap:7px}
+  .login-body .login-disclaimer>.icon{height:15px;width:15px}
+  .dashboard-body{--dashboard-header-height:129px}
+  .dashboard-first-screen{min-height:calc(100svh - 147px);gap:16px}
+  .dashboard-first-screen .primary-panels{gap:20px}
+  .dashboard-first-screen .metric-grid{gap:13px}
+  .dashboard-first-screen .metric-card{padding:14px 12px}
+  .dashboard-first-screen .metric-value{font-size:30px}
+  .dashboard-first-screen .panel-heading{padding:17px 16px 0}
+  .dashboard-first-screen .forecast-chart{height:200px;flex:none}
+  .dashboard-first-screen .flow-canvas{min-height:250px}
+  .dashboard-first-screen .flow-node{padding:8px}
+  .dashboard-first-screen .flow-node strong{font-size:17px}
+  .dashboard-scroll-cue{font-size:10px;padding-bottom:5px}
+}
+@media(max-width:370px){
+  .home-body .brand,.login-body .brand{font-size:16px}
+  .home-body .brand img,.login-body .brand img{width:29px;height:29px}
+  .home-body .ministry-brand,.login-body .ministry-brand{max-width:129px;font-size:8px}
+  .home-body .station-selector{gap:4px}
+  .home-body .station-radio{font-size:10px;padding:3px 0}
+  .home-body .nav-globe{width:58px}
+  .home-body .nav-globe .globe-wrap{transform:scale(.18);top:5px}
+  .home-body .centered-intro h1{font-size:24px}
+  .home-body .centered-intro>.eyebrow{font-size:6px}
+  .home-body .station-card{padding:9px 12px}
+  .login-body .login-panel{padding:14px 15px}
+  .login-body .secure-heading h2{font-size:17px}
+  .login-body .login-page-heading h1{font-size:18px}
+}
+/* Keep controls reachable on exceptionally short windows or at high browser zoom. */
+@media(max-height:620px){.home-body #app,.login-body #app{min-height:100svh}}
+@media(min-width:901px) and (max-height:750px){
+  .login-body .login-page-heading h1{font-size:25px}
+  .login-body .login-page-heading>p{font-size:14px}
+  .login-body .station-story{padding:10px 12px}
+  .login-body .station-story h2{font-size:34px;margin:8px 0 15px}
+  .login-body .station-story h2>span{font-size:10px;margin-top:7px}
+  .login-body .story-location{margin-bottom:12px}
+  .login-body .station-story>p{font-size:12px}
+  .login-body .login-weather{margin-top:18px;padding:4px 16px}
+  .login-body .login-weather>div{padding:11px 0}
+  .login-body .login-weather span{font-size:12px}
+  .login-body .login-weather strong{font-size:18px}
+  .login-body .story-caption{margin-top:12px}
+  .login-body .login-panel{padding:16px 23px}
+  .login-body .secure-heading h2{font-size:19px}
+  .login-body .secure-heading p{font-size:11px}
+  .login-body .login-lock{width:38px;height:38px}
+  .login-body #login-form label{margin-top:6px;font-size:10px}
+  .login-body .input-wrap{min-height:33px}
+  .login-body .input-wrap input,.login-body .input-wrap select{padding:6px 0}
+  .login-body .input-wrap .icon-button{min-height:25px;min-width:25px}
+  .login-body #login-form .button.primary{margin-top:12px;font-size:13px}
+  .login-body #login-form .button.secondary{font-size:12px}
+  .login-body .login-disclaimer{font-size:8px}
+}
+@media(max-width:650px) and (max-height:760px){
+  .home-body .sketch-landing{grid-template-rows:65px 1fr auto 18px}
+  .home-body .station-nav-row,.home-body .nav-globe{height:65px}
+  .home-body .nav-globe .globe-wrap{transform:scale(.17);top:0}
+  .home-body .centered-intro{padding:8px 0 10px}
+  .home-body .centered-intro h1{font-size:25px;margin:7px 0}
+  .home-body .station-card{padding-top:9px;padding-bottom:9px}
+  .login-body .login-page{padding-top:7px;padding-bottom:9px}
+  .login-body .login-page-heading{padding-bottom:7px}
+  .login-body .login-page-heading h1{font-size:17px;line-height:1.15}
+  .login-body .login-page-heading>p{font-size:11px}
+  .login-body .login-layout{gap:9px}
+  .login-body .station-story h2{font-size:20px;margin-bottom:3px}
+  .login-body .story-location{margin-bottom:5px}
+  .login-body .login-weather{padding:6px 4px}
+  .login-body .login-weather strong{font-size:15px}
+  .login-body .login-panel{padding:12px 16px}
+  .login-body .secure-heading{padding-bottom:7px}
+  .login-body .secure-heading h2{font-size:17px}
+  .login-body .secure-heading p{font-size:9px;margin-top:2px}
+  .login-body .login-lock{height:29px;width:29px}
+  .login-body #login-form{margin-top:7px}
+  .login-body #login-form label{margin-top:5px;margin-bottom:3px;font-size:9px}
+  .login-body .input-wrap{min-height:30px}
+  .login-body .input-wrap input,.login-body .input-wrap select{padding:5px 0;font-size:11px}
+  .login-body .input-wrap .icon-button{min-height:23px;min-width:23px}
+  .login-body #login-form .button.primary{padding:8px;margin-top:10px;font-size:12px}
+  .login-body #login-form .button.secondary{padding:7px;margin-top:5px;font-size:10px}
+  .login-body .login-disclaimer{padding-top:6px;margin-top:7px;font-size:7px}
+}
+
+/* Full-width station banner and simplified landing page. */
+.home-body .sketch-landing{padding:0;background:linear-gradient(180deg,#f4faff,#eaf5ff)}
+.home-body .station-nav-row{max-width:none;padding:0 5%;background:linear-gradient(110deg,#dceeff,#edf7ff);border-bottom:1px solid #b5d6f4}
+.home-body .station-selector{flex:1;min-width:0;gap:clamp(20px,7vw,110px)}
+.home-body .station-selector legend{font-size:12px;letter-spacing:2px;color:#164f8d}
+.home-body .centered-intro,.home-body .station-section{width:90%}
+.home-body .landing-blue-strip{min-height:32px;padding:0}
+@media(max-width:650px){
+  .home-body .station-selector{gap:12px;max-width:78%}
+  .home-body .station-selector legend{font-size:8px;letter-spacing:1px}
+  .home-body .landing-blue-strip{min-height:24px}
+}
+
+/* Distinct station accents and stronger landing-page contrast. */
+.home-body .sketch-landing{background:#f5f7fb}
+.home-body .public-header{background:#fff;border-bottom-color:#bdcadb}
+.home-body .header-program{color:#334155;font-weight:650}
+.home-body .station-nav-row{background:#e6edf6;border-bottom:1px solid #b3c4da}
+.home-body .station-selector legend{color:#172c4d;font-weight:800}
+.home-body .station-maitri{--station-accent:#0756a6}
+.home-body .station-bharati{--station-accent:#087568}
+.home-body .station-himadri{--station-accent:#7442a2}
+.home-body .station-radio{border:1px solid transparent;border-radius:8px;padding:7px}
+.home-body .station-radio>span{color:var(--station-accent);font-weight:750}
+.home-body .station-radio>small{color:#374b63}
+.home-body .station-radio input{accent-color:var(--station-accent)}
+.home-body .station-radio.selected{background:#fff;border-color:var(--station-accent);box-shadow:0 2px 6px #17345812}
+.home-body .centered-intro h1{color:#14243e;text-shadow:none}
+.home-body .centered-intro h1>span{color:#075f68}
+.home-body .landing-login{background:#075f68;border-color:#075f68;box-shadow:0 4px 12px #075f6826;color:#fff}
+.home-body .landing-login:hover{background:#064b52;border-color:#064b52}
+.home-body .login-station-note,.home-body .subtle-note{color:#42536b}
+.home-body .section-heading .eyebrow{color:#9a4b0b;font-weight:750}
+.home-body .section-heading h2{color:#172c4d}
+.home-body .station-card{background:#fff;border-color:#c0ccda;box-shadow:0 4px 14px #1b365d0d}
+.home-body .station-card:before{background:var(--station-accent);height:3px}
+.home-body .station-card.selected{background:#fff;border-color:var(--station-accent);box-shadow:0 0 0 1px var(--station-accent),0 5px 16px #1b365d12}
+.home-body .station-card:hover{border-color:var(--station-accent)}
+.home-body .station-title h3,.home-body .station-title>.icon,.home-body .station-card .text-link{color:var(--station-accent)}
+.home-body .station-region{color:var(--station-accent);font-weight:650}
+.home-body .station-number{color:#52657b}
+.home-body .station-card .station-place{color:#334155;font-weight:600}
+.home-body .station-card .station-description,.home-body .station-card-bottom{color:#475569}
+.home-body .station-card-bottom{border-color:#d5dde7}
+@media(max-width:650px){
+  .home-body .station-selector{gap:4px}
+  .home-body .station-radio{padding:5px 3px}
+}
+
+/* Only requested login weather alignment and small-text readability. */
+.login-body .login-weather{width:100%;max-width:440px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));padding:16px 10px}
+.login-body .login-weather>div{display:flex;flex-direction:column;gap:6px;padding:0 6px;border:0;border-right:1px solid #a9c8e5;text-align:center}
+.login-body .login-weather>div:last-child{border:0}
+.login-body .login-weather span{font-size:13px;color:#173f6a}
+.login-body .login-weather small{font-size:12px}
+.login-body .station-story .eyebrow{font-size:12px;color:#164778}
+.login-body .station-story>p{color:#193f66;text-shadow:0 1px 5px #fff}
+.login-body .story-location strong,.login-body .story-location span{font-size:14px;color:#173f6a}
+.login-body .station-story h2>span{font-size:12px;color:#174d82}
+.login-body .secure-heading p{font-size:14px;color:#234b76}
+.login-body #login-form label{font-size:14px;color:#173f6a}
+.login-body .input-wrap input,.login-body .input-wrap select{font-size:14px;color:#173f6a}
+.login-body .input-wrap input::placeholder{color:#476381}
+@media(max-width:650px){
+.login-body .login-weather{padding:9px 5px}
+.login-body .login-weather span{font-size:12px}
+.login-body .story-location strong,.login-body .story-location span{font-size:12px}
+}
+
+/* Compact login card; preserve the existing page design. */
+.login-body .login-panel{width:100%;max-width:390px;justify-self:center;border:1px solid #9dc4ed;border-top:3px solid #126bc5;box-shadow:0 12px 30px #0c4d9024,inset 0 1px 0 #fff;background:linear-gradient(145deg,#ffffffed,#edf6fff5)}
+.login-body .login-lock{background:linear-gradient(145deg,#e1f1ff,#c7e4ff);border-color:#8cbbea;box-shadow:0 3px 10px #126bc51a}
+.login-body .secure-heading{border-bottom-color:#bed6ee}
+.login-body #login-form .input-wrap{background:#ffffffdf;border-color:#a9c5e2}
+.login-body #login-form .button.primary{background:linear-gradient(110deg,#0655ad,#087cbd);box-shadow:0 5px 13px #095da72b;border-color:#157cc9}
+.login-body #login-form .button.primary:hover{background:linear-gradient(110deg,#06458f,#07699f)}
+.login-body .login-footer-brand{text-align:center;color:#fff;font-size:14px;font-weight:650;letter-spacing:.5px;padding:12px 5%}
+
+@media(min-width:651px){
+.login-body .login-page-heading,.login-body .login-layout{position:relative;top:-24px}
+}
+@media(max-width:650px){
+.login-body .login-page-heading,.login-body .login-layout{position:relative;top:-8px}
+}

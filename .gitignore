@@ -1,0 +1,22 @@
+.venv/
+**/.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local runtime data and credentials
+backend/data/api-key.txt
+backend/data/*.sqlite3
+
+# Runtime logs and local environment files
+*.log
+.env
+.env.*
+!.env.example
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+

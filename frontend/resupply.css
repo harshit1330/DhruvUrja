@@ -1,0 +1,12 @@
+.resupply-panel{margin-bottom:24px;padding:26px;color:var(--text,#174875)}
+.resupply-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:22px}
+.resupply-heading h2{margin:8px 0;font-size:22px}.resupply-heading p,.resupply-note{font-size:12px;line-height:1.7;color:inherit;opacity:.8}
+.resupply-form{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.resupply-form label{display:flex;flex-direction:column;gap:8px;font-size:12px;font-weight:600}
+.resupply-form input{width:100%;min-width:0;border:1px solid #adcdef;border-radius:8px;padding:12px;font:inherit;color:inherit;background:transparent;box-sizing:border-box}.resupply-form input:focus{outline:2px solid #237fdb;outline-offset:2px}
+.resupply-basis{grid-column:1/-1}.resupply-actions{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:12px}.resupply-note{margin:16px 0}.resupply-error{color:#ba3838;line-height:1.6}
+.resupply-verdict{margin-top:22px;padding:18px;border-radius:10px;background:#e5f7ee;color:#16664b}.resupply-verdict p{margin:8px 0 0;font-size:12px}.resupply-risk{background:#fff0dc;color:#854617}
+.resupply-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin:24px 0}.resupply-stats span,.resupply-stats strong{display:block}.resupply-stats span{font-size:12px}.resupply-stats strong{font-size:25px;margin-top:10px}.resupply-stats small{font-size:12px;font-weight:400}
+.resupply-chart{display:block;width:100%;height:auto;min-height:190px}.resupply-chart text{fill:currentColor;font-size:11px}.resupply-table{width:100%;border-collapse:collapse;font-size:13px;min-width:650px}.resupply-table th,.resupply-table td{text-align:left;padding:16px 12px;border-bottom:1px solid #bed3e8}.resupply-table small{display:block;margin-top:7px;font-size:11px;line-height:1.6}.resupply-table caption{text-align:left;padding:12px;font-weight:600}
+body[data-theme=night] .resupply-panel{color:#c8def6}body[data-theme=night] .resupply-verdict{background:#173c32;color:#a0ebca}body[data-theme=night] .resupply-risk{background:#3c3022;color:#ffd292}
+@media(max-width:800px){.resupply-form,.resupply-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.resupply-heading{flex-direction:column}}
+@media(max-width:480px){.resupply-panel{padding:18px}.resupply-form{grid-template-columns:1fr}.resupply-heading h2{font-size:20px}.resupply-stats strong{font-size:22px}.resupply-chart{min-height:150px}.resupply-actions .button{width:100%}.resupply-panel .chart-legend{flex-wrap:wrap}}
